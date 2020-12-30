@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vertcoin - Hard Fork to Verthash</title>
+	<meta charset="utf-8"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style type="text/css">
+	* { margin: 0; padding: 0; }
+	body, html { height: 100%; width: 100%; }
+	body {
+		background: #02693a;
+		font-family: 'Roboto', sans-serif;
+		color: white;
+	}
+	#container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		color: #fff;
+	}
+	#countdown {
+		display: flex;
+		padding: 20px;
+		justify-content: space-between;
+		flex-direction: column;
+		min-height: 500px;
+		width: 500px;
+		max-width: 100%;
+		text-align: center;
+	}
+
+	.logo {
+		width: 320px;
+		display: block;
+		margin: 20px auto;
+	}
+
+	h1, h2, h3, h4, h5 {
+		display: block;
+	}
+
+	h1 {
+		font-weight: 700;
+		margin-bottom: 14px;
+		margin-top: 20px;
+		font-size: 28px;
+	}
+
+	h2 {
+		font-weight: 400;
+		font-size: 26px;
+		margin-bottom: 20px;
+	}
+
+	#eta {
+		padding: 20px 80px;
+	}
+
+	#success {
+		display: none;
+	}
+
+	.row {
+		padding: 5px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+.row strong {
+	text-align: left;
+}
+	.row span {
+		text-align: right;
+	}
+
+	#eta .row:last-of-type {
+		margin-bottom: 20px;
+	}
+
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/favicon.png">
+</head>
+<body>
+	<div id="container">
+		<div id="countdown">
+			<img src="./vertcoin_logo_text_white.svg" alt="Vertcoin Logo" class="logo" />
+			<h1>Hard Fork From Lyra2REv3 to Verthash</h1>
+			<h2>Scheduled for block <strong id="forkHeight">...</strong></h2>
+			<h2>Current Block: <strong id="currentBlock">...</strong></h2>
+			<h1>Estimated Fork</h1>
+			<div id="success">
+				Fork Success!
+			</div>
+			<div id="eta">
+				<div class="row"> 
+					<strong>Remaining Blocks</strong>
+					<span id="remainingBlocks">...</span>
+				</div>
+				<div class="row"> 
+					<strong>Target Block Time</strong>
+					<span>2.5 minutes</span>
+				</div>
+				<div class="row"> 
+					<strong>Remaining Time</strong>
+					<span id="remainingTime">...</span>
+				</div>
+				<h3 id="verthashETA">...</h3>
+			</div>
+		</div>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.js"
+  integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./fork.js"></script>
+</body>
+</html>
